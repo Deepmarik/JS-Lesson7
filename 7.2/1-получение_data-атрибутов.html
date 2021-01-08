@@ -23,16 +23,14 @@
 
     <script>
         "use strict";
-        let buttons = document.querySelector("button");
-        let button = document.getElementsByTagName("button");
-        buttons.addEventListener('button', function (event) {
-            console.log(buttons.dataset.id);
-            console.log(buttons.dataset.value);
-        });
-        Array.from(button).forEach(function (button) {
-            console.log(button.dataset.id);
-            console.log(button.dataset.value);
-        });
+        //let buttons = document.querySelector("button");
+        let buttons = document.getElementsByTagName("button");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function (event) {
+                console.log(event.target.dataset.id);
+                console.log(event.target.dataset.value);
+            });
+        }
     </script>
 </body>
 
